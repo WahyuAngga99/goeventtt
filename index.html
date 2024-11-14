@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>GoEvent</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-space-dynamic.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+ 
+<style>
+ 
+
+  .kin {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+  }
+
+  .slider-container {
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+    overflow: hidden;
+  }
+
+  .slider {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .card {
+    min-width: 300px;
+    margin: 0 15px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+    background: #f2f2f2;
+  }
+
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
+  .card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .card p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .card .price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+
+  .card .date {
+    font-size: 1rem;
+    color: #3498db;
+    margin-bottom: 15px;
+  }
+
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .favorite-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #f60000;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+  .prev-btn {
+    left: 10px;
+  }
+
+  .next-btn {
+    right: 10px;
+  }
+
+  .see-more-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+
+  .see-more-btn:hover {
+    background-color: #0056b3;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      min-width: 250px;
+    }
+  }
+</style>
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+ <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <h4>Go<span>Event</span></h4>
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="#home" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="#events">Events</a></li>
+              <li class="scroll-to-section"><a href="#about">About Us</a></li>
+              <li class="scroll-to-section"><a href="#services">Services</a></li>
+              <li class="scroll-to-section"><a href="#my-tickets">My Tickets</a></li>
+              <!-- Menu untuk login dan registrasi -->
+              <li class="scroll-to-section"><a href="#login">Login</a></li> 
+              <li class="scroll-to-section"><a href="#register">Register</a></li> 
+              <li class="scroll-to-section"><div class="main-red-button"><a href="#contact">Contact Now</a></div></li> 
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+    
+</header>
+
+  <!-- ***** Header Area End ***** -->
+
+  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-6 align-self-center">
+                        <div class="left-content header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+                            <h6>Selamat Datang di GoEvent</h6>
+                            <h2>Kami Menyediakan Tiket untuk <em>Berbagai Acara</em> &amp; <span>Event Spesial</span></h2>
+                            <p>GoEvent adalah platform untuk memudahkan Anda menemukan dan membeli tiket acara. Temukan berbagai event menarik di sini!</p>
+                            <form id="search" action="#" method="GET">
+                                <fieldset>
+                                    <input type="address" name="address" class="email" placeholder="Masukkan URL acara..." autocomplete="on" required>
+                                </fieldset>
+                                <fieldset>
+                                    <button type="submit" class="main-button">Cari Tiket Acara</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+                            <img src="assets/images/banner-right-image.png" alt="team meeting">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="kin wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s"> 
+<div class="section-heading">
+                  <h2>Perluas acara Anda dengan layanan <em>e-ticketing</em> kami &amp; ide <span>events</span></h2>
+              </div>
+              <br>
+              <br>    
+<div class="slider-container">
+  <button class="slider-btn prev-btn" id="prev-btn">&#10094;</button>
+  <div class="slider" id="slider">
+    <div class="card">
+      <button class="favorite-btn">&#10084;</button>
+      <img src="https://via.placeholder.com/300x200?text=Event+1" alt="Event 1">
+      <h3>Event 1: Concert</h3>
+      <p>Join us for a great music concert with amazing performances.</p>
+      <p class="price">IDR 500,000</p>
+      <p class="date">Tanggal: 12 Desember 2024</p>
+    </div>
+    <div class="card">
+      <button class="favorite-btn">&#10084;</button>
+      <img src="https://via.placeholder.com/300x200?text=Event+2" alt="Event 2">
+      <h3>Event 2: Festival</h3>
+      <p>Experience the vibrant cultural festival this year.</p>
+      <p class="price">IDR 350,000</p>
+      <p class="date">Tanggal: 20 Desember 2024</p>
+    </div>
+    <div class="card">
+      <button class="favorite-btn">&#10084;</button>
+      <img src="https://via.placeholder.com/300x200?text=Event+3" alt="Event 3">
+      <h3>Event 3: Theater Play</h3>
+      <p>Don't miss this award-winning theater performance.</p>
+      <p class="price">IDR 250,000</p>
+      <p class="date">Tanggal: 25 Desember 2024</p>
+    </div>
+    <div class="card">
+      <button class="favorite-btn">&#10084;</button>
+      <img src="https://via.placeholder.com/300x200?text=Event+4" alt="Event 4">
+      <h3>Event 4: Sports Match</h3>
+      <p>Cheer for your favorite team in this thrilling match.</p>
+      <p class="price">IDR 300,000</p>
+      <p class="date">Tanggal: 30 Desember 2024</p>
+    </div>
+    <div class="card">
+      <button class="favorite-btn">&#10084;</button>
+      <img src="https://via.placeholder.com/300x200?text=Event+4" alt="Event 5">
+      <h3>Event 5: Sports Match</h3>
+      <p>Cheer for your favorite team in this thrilling match.</p>
+      <p class="price">IDR 300,000</p>
+      <p class="date">Tanggal: 30 Desember 2024</p>
+    </div>
+    <div class="card">
+      <button class="favorite-btn">&#10084;</button>
+      <img src="https://via.placeholder.com/300x200?text=Event+4" alt="Event 6">
+      <h3>Event 6: Sports Match</h3>
+      <p>Cheer for your favorite team in this thrilling match.</p>
+      <p class="price">IDR 300,000</p>
+      <p class="date">Tanggal: 30 Desember 2024</p>
+    </div>
+    <div class="card">
+      <button class="favorite-btn">&#10084;</button>
+      <img src="https://via.placeholder.com/300x200?text=Event+4" alt="Event 7">
+      <h3>Event 7: Sports Match</h3>
+      <p>Cheer for your favorite team in this thrilling match.</p>
+      <p class="price">IDR 300,000</p>
+      <p class="date">Tanggal: 30 Desember 2024</p>
+    </div>
+  </div>
+  <button class="slider-btn next-btn" id="next-btn">&#10095;</button>
+</div>
+
+<button class="see-more-btn">Lihat Selengkapnya</button>
+</div>
+
+<script>
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+  const slider = document.getElementById('slider');
+  const cards = document.querySelectorAll('.card');
+  let scrollAmount = 0;
+  const cardWidth = cards[0].offsetWidth + 30; // Width of each card with margin
+
+  // Show and hide buttons based on position
+  function updateButtons() {
+    if (scrollAmount <= 0) {
+      prevBtn.style.display = 'none';
+    } else {
+      prevBtn.style.display = 'block';
+    }
+
+    if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
+      nextBtn.style.display = 'none';
+    } else {
+      nextBtn.style.display = 'block';
+    }
+  }
+
+  // Move to the next card
+  nextBtn.addEventListener('click', () => {
+    if (scrollAmount < slider.scrollWidth - slider.clientWidth) {
+      scrollAmount += cardWidth;
+      slider.style.transform = `translateX(-${scrollAmount}px)`;
+    }
+    updateButtons();
+  });
+
+  // Move to the previous card
+  prevBtn.addEventListener('click', () => {
+    if (scrollAmount > 0) {
+      scrollAmount -= cardWidth;
+      slider.style.transform = `translateX(-${scrollAmount}px)`;
+    }
+    updateButtons();
+  });
+
+  // Initialize the buttons visibility
+  updateButtons();
+</script>
+
+<div id="about" class="about-us section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="left-image wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+          <img src="assets/images/about-left-image.png" alt="event illustration">
+        </div>
+      </div>
+      <div class="col-lg-8 align-self-center">
+        <div class="services">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                <div class="icon">
+                  <img src="assets/images/service-icon-01.png" alt="events">
+                </div>
+                <div class="right-text">
+                  <h4>Acara Terpercaya</h4>
+                  <p>Menawarkan berbagai acara yang terjamin berkualitas dan aman untuk dinikmati oleh semua pengunjung.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
+                <div class="icon">
+                  <img src="assets/images/service-icon-02.png" alt="ticketing">
+                </div>
+                <div class="right-text">
+                  <h4>Pemesanan Tiket Mudah</h4>
+                  <p>Proses pemesanan tiket yang cepat dan mudah, cukup beberapa langkah untuk mendapatkan tiket Anda.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.9s">
+                <div class="icon">
+                  <img src="assets/images/service-icon-03.png" alt="customer support">
+                </div>
+                <div class="right-text">
+                  <h4>Dukungan Pelanggan 24/7</h4>
+                  <p>Tim customer service kami siap membantu Anda kapan saja, memastikan pengalaman yang menyenangkan.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="1.1s">
+                <div class="icon">
+                  <img src="assets/images/service-icon-04.png" alt="secure payments">
+                </div>
+                <div class="right-text">
+                  <h4>Pembayaran Aman</h4>
+                  <p>Transaksi pembayaran yang aman dan terjamin, menggunakan metode pembayaran yang terpercaya.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="services" class="our-services section">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-6 align-self-center wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
+              <div class="left-image">
+                  <img src="assets/images/services-left-image.png" alt="">
+              </div>
+          </div>
+          <div class="col-lg-6 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
+              <div class="section-heading">
+                  <h2>Perluas acara Anda dengan layanan <em>e-ticketing</em> kami &amp; ide <span>proyek</span></h2>
+                  <p>Platform e-ticketing kami menawarkan berbagai fitur canggih untuk memudahkan proses pembelian tiket acara Anda, menjamin kenyamanan pengunjung, dan memastikan keamanan transaksi yang maksimal.</p>
+              </div>
+              <div class="row">
+                  <!-- Service 1 -->
+                  <div class="col-lg-4">
+                      <div class="service-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
+                          <div class="icon">
+                              <img src="assets/images/service-icon-01.png" alt="ticket automation" class="w-1/2 mx-auto">
+                          </div>
+                          <div class="right-text text-center">
+                              <h4 class="text-sm">Automasi Tiket</h4>
+                              <p class="text-xs">Proses pembelian tiket otomatis yang mudah dan cepat bagi pengunjung acara Anda.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Service 2 -->
+                  <div class="col-lg-4">
+                      <div class="service-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.7s">
+                          <div class="icon">
+                              <img src="assets/images/service-icon-02.png" alt="secure payment" class="w-1/2 mx-auto">
+                          </div>
+                          <div class="right-text text-center">
+                              <h4 class="text-sm">Pembayaran Aman</h4>
+                              <p class="text-xs">Metode pembayaran yang aman dan berbagai pilihan untuk kenyamanan pengunjung.</p>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- Service 3 -->
+                  <div class="col-lg-4">
+                      <div class="service-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.9s">
+                          <div class="icon">
+                              <img src="assets/images/service-icon-03.png" alt="event analytics" class="w-1/2 mx-auto">
+                          </div>
+                          <div class="right-text text-center">
+                              <h4 class="text-sm">Analisis Penjualan</h4>
+                              <p class="text-xs">Laporan dan analisis penjualan yang detail untuk membantu Anda memonitor acara dengan lebih efektif.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+ <div id="p" class="our-portfolio section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 offset-lg-3">
+        <div class="section-heading  wow bounceIn" data-wow-duration="1s" data-wow-delay="0.2s">
+          <h2>Lihat Apa Yang Kami <em>Tawarkan</em> &amp; Apa Yang Kami <span>Siapkan</span></h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-sm-6">
+        <a href="#">
+          <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.3s">
+            <div class="hidden-content">
+              <h4>Analisis Tiket</h4>
+              <p>Menganalisis data tiket untuk meningkatkan pengalaman pengunjung acara Anda.</p>
+            </div>
+            <div class="showed-content">
+              <img src="assets/images/portfolio-image.png" alt="">
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <a href="#">
+          <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.4s">
+            <div class="hidden-content">
+              <h4>Laporan Acara</h4>
+              <p>Menyediakan laporan mendetail tentang penjualan tiket dan kehadiran pengunjung acara.</p>
+            </div>
+            <div class="showed-content">
+              <img src="assets/images/portfolio-image.png" alt="">
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <a href="#">
+          <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+            <div class="hidden-content">
+              <h4>Pengujian Performa</h4>
+              <p>Menguji performa sistem untuk memastikan tiket dapat dijual dengan lancar dan tanpa hambatan.</p>
+            </div>
+            <div class="showed-content">
+              <img src="assets/images/portfolio-image.png" alt="">
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-3 col-sm-6">
+        <a href="#">
+          <div class="item wow bounceInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+            <div class="hidden-content">
+              <h4>Analisis Data Penjualan</h4>
+              <p>Menganalisis data penjualan tiket untuk mendapatkan wawasan dan strategi pemasaran yang lebih baik.</p>
+            </div>
+            <div class="showed-content">
+              <img src="assets/images/portfolio-image.png" alt="">
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="b" class="our-blog section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
+        <div class="section-heading">
+          <h2>Periksa Apa Yang Sedang <em>Tren</em> Di Berita <span>Kami</span></h2>
+        </div>
+      </div>
+      <div class="col-lg-6 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.25s">
+        <div class="top-dec">
+          <img src="assets/images/blog-dec.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
+        <div class="left-image">
+          <a href="#"><img src="assets/images/big-blog-thumb.jpg" alt="Sistem Tiket Online"></a>
+          <div class="info">
+            <div class="inner-content">
+              <ul>
+                <li><i class="fa fa-calendar"></i> 24 Mar 2021</li>
+                <li><i class="fa fa-users"></i> Tim Ticketing</li>
+                <li><i class="fa fa-folder"></i> Sistem Tiket</li>
+              </ul>
+              <a href="#"><h4>Sistem E-Ticketing Untuk Acara</h4></a>
+              <p>Berikut adalah panduan lengkap tentang bagaimana menggunakan sistem e-ticketing untuk acara besar dan kecil.</p>
+              <div class="main-blue-button">
+                <a href="#">Temukan Lebih Banyak</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
+        <div class="right-list">
+          <ul>
+            <li>
+              <div class="left-content align-self-center">
+                <span><i class="fa fa-calendar"></i> 18 Mar 2021</span>
+                <a href="#"><h4>Tiket Online: Keuntungan &amp; Tantangan</h4></a>
+                <p>Pahami keuntungan dan tantangan dalam menggunakan sistem tiket online untuk acara Anda.</p>
+              </div>
+              <div class="right-image">
+                <a href="#"><img src="assets/images/blog-thumb-01.jpg" alt=""></a>
+              </div>
+            </li>
+            <li>
+              <div class="left-content align-self-center">
+                <span><i class="fa fa-calendar"></i> 14 Mar 2021</span>
+                <a href="#"><h4>Manfaat Menggunakan Sistem Tiket Elektronik</h4></a>
+                <p>Pelajari bagaimana sistem tiket elektronik dapat meningkatkan efisiensi dan kenyamanan bagi penyelenggara acara.</p>
+              </div>
+              <div class="right-image">
+                <a href="#"><img src="assets/images/blog-thumb-01.jpg" alt=""></a>
+              </div>
+            </li>
+            <li>
+              <div class="left-content align-self-center">
+                <span><i class="fa fa-calendar"></i> 06 Mar 2021</span>
+                <a href="#"><h4>Strategi Penjualan Tiket untuk Acara Besar</h4></a>
+                <p>Bagaimana merencanakan dan mengelola penjualan tiket untuk acara besar dengan sukses.</p>
+              </div>
+              <div class="right-image">
+                <a href="#"><img src="assets/images/blog-thumb-01.jpg" alt=""></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="contact" class="contact-us section">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-6 align-self-center wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay="0.25s">
+              <div class="section-heading">
+                  <h2>Hubungi Kami untuk Pembelian Tiket Acara Anda</h2>
+                  <p>Jika Anda memiliki pertanyaan atau ingin membeli tiket untuk acara kami, silakan kirimkan pesan kepada kami. Kami akan segera menghubungi Anda.</p>
+                  <div class="phone-info">
+                      <h4>Untuk pertanyaan lebih lanjut, Hubungi Kami: </h4><br>
+                      <h4><span><i class="fa fa-phone"></i> <a href="#">010-020-0340</a></span></h4>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-6 wow fadeInRight" data-wow-duration="0.5s" data-wow-delay="0.25s">
+              <form id="contact" action="" method="post">
+                  <div class="row">
+                      <div class="col-lg-6">
+                          <fieldset>
+                              <input type="name" name="name" id="name" placeholder="Nama Depan" autocomplete="on" required>
+                          </fieldset>
+                      </div>
+                      <div class="col-lg-6">
+                          <fieldset>
+                              <input type="surname" name="surname" id="surname" placeholder="Nama Belakang" autocomplete="on" required>
+                          </fieldset>
+                      </div>
+                      <div class="col-lg-12">
+                          <fieldset>
+                              <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Email Anda" required="">
+                          </fieldset>
+                      </div>
+                      <div class="col-lg-12">
+                          <fieldset>
+                              <textarea name="message" type="text" class="form-control" id="message" placeholder="Pesan Anda" required=""></textarea>  
+                          </fieldset>
+                      </div>
+                      <div class="col-lg-12">
+                          <fieldset>
+                              <button type="submit" id="form-submit" class="main-button">Kirim Pesan</button>
+                          </fieldset>
+                      </div>
+                  </div>
+                  <div class="contact-dec">
+                      <img src="assets/images/contact-decoration.png" alt="">
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<footer>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.25s">
+              <p>© Copyright 2021 Go Event. All Rights Reserved. 
+              <br>Design: <a rel="nofollow">CodeNew</a></p>
+          </div>
+      </div>
+  </div>
+</footer>
+
+  <!-- Scripts -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <script src="assets/js/imagesloaded.js"></script>
+  <script src="assets/js/templatemo-custom.js"></script>
+
+</body>
+</html>
